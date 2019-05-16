@@ -41,6 +41,7 @@
 (defmethod comment-replace :star [state ch _]
   (condp = ch
    \/ [:idle " "]
+   \newline [state ch]
    [state " "])
   )
 

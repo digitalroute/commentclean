@@ -25,4 +25,12 @@
   (verify-comment "1\n2\n3" "1\n2\n3")
   (verify-comment "1\n  \n\n\n  2\n3" "1\n/*\n\n\n*/2\n3")
   (verify-comment "123            456" "123 /* **** */ 456")
+  (verify-comment 
+           "  \n                \n             \n            \n            \n             " 
+           "/*
+           * Bla
+           *a
+           *
+           *
+           */")
 )
